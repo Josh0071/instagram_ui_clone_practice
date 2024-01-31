@@ -20,7 +20,7 @@ class PostContainer extends StatefulWidget {
 }
 
 class _PostContainerState extends State<PostContainer> {
-  int currentPos = 0;
+  int currentImage = 0;
   int index = 0;
   String like = 'assets/heart2.png';
   String isLiked = 'assets/heartFilledIn.png';
@@ -172,7 +172,7 @@ class _PostContainerState extends State<PostContainer> {
                   viewportFraction: 1.05,
                   onPageChanged: (index, reason) {
                     setState(() {
-                      currentPos = index;
+                      currentImage = index;
                     });
                   }),
               itemBuilder:
@@ -193,7 +193,7 @@ class _PostContainerState extends State<PostContainer> {
                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: currentPos == index ? Colors.blue : Colors.black54,
+                    color: currentImage == index ? Colors.blue : Colors.black54,
                   ),
                 );
               }).toList(),
